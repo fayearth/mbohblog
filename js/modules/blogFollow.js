@@ -8,7 +8,6 @@
   var fetchGapi = function () {
     $.getScript("https://apis.google.com/js/plusone.js").done(function() {
       followersIframeOpen("https://www.blogger.com/followers.g?blogID\x3d"+sfr.env.data.blogID+"\x26colors\x3dCgt0cmFuc3BhcmVudBILdHJhbnNwYXJlbnQaBjY2NjY2NiIGMjI4OGJiKgZmZmZmZmYyBjAwMDAwMDoGNjY2NjY2QgYyMjg4YmJKBjk5OTk5OVIGMjI4OGJiWgt0cmFuc3BhcmVudA%3D%3D\x26pageSize\x3d108\x26origin\x3d"+sfr.env.data.homepageUrl);
-      console.log("done");
     });
   };
 
