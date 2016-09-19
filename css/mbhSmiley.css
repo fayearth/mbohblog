@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'mbhSmiley';
-  src:  url('.../fonts/smiley/1.0/mbhSmiley.eot?pib9e6');
-  src:  url('.../fonts/smiley/1.0/mbhSmiley.eot?pib9e6#iefix') format('embedded-opentype'),
-    url('.../fonts/smiley/1.0/mbhSmiley.ttf?pib9e6') format('truetype'),
-    url('.../fonts/smiley/1.0/mbhSmiley.woff?pib9e6') format('woff'),
-    url('.../fonts/smiley/1.0/mbhSmiley.svg?pib9e6#mbhSmiley') format('svg');
+  src:  url('../fonts/smiley/1.0/mbhSmiley.eot?pib9e6');
+  src:  url('../fonts/smiley/1.0/mbhSmiley.eot?pib9e6#iefix') format('embedded-opentype'),
+    url('../fonts/smiley/1.0/mbhSmiley.ttf?pib9e6') format('truetype'),
+    url('../fonts/smiley/1.0/mbhSmiley.woff?pib9e6') format('woff'),
+    url('../fonts/smiley/1.0/mbhSmiley.svg?pib9e6#mbhSmiley') format('svg');
   font-weight: normal;
   font-style: normal;
 }
