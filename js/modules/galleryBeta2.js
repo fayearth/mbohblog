@@ -24,14 +24,14 @@
     return this
   };
   var attach = function($this) {
-    var $loading = $('<div class="iconLoad"><i class="s-spinner"></i></div>')
     if (!$this.attr("id") || $this.find(".image-active").length === 0) {
       $this.on("click", ".gallery-item a", function(func) {
         func.preventDefault();
         var $trigger = $(this),
             url = $trigger.attr("href"),
             previewInstance = new preview(url, $(this)),
-            $previewInstance = previewInstance.render();
+            $previewInstance = previewInstance.render(),
+            $loading = $('<div class="iconLoad"><i class="s-spinner"></i></div>');
         $this.addClass('isAttached');
         $trigger.parent().addClass('inPreview');
         $("body").append($previewInstance);
@@ -55,7 +55,8 @@
         var $trigger = $(this),
             url = $trigger.attr("href"),
             previewInstance = new preview(url, $(this)),
-            $previewInstance = previewInstance.render();
+            $previewInstance = previewInstance.render(),
+            $loading = $('<div class="iconLoad"><i class="s-spinner"></i></div>');
         $trigger.parent().append($loading);$trigger.css({'pointer-events':'none'});
         $("body").append($previewInstance);
         $previewInstance.one("sfr-ready", function(func) {
