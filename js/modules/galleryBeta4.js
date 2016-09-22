@@ -101,7 +101,7 @@
         $this.trigger("sfr-galleryimagechanged", active)
       };
       var showImage = function(image){
-        var regex = /\/s[0-9]+(\/)?/;
+        var regex = /\/s[0-9]+(\/)?/,
             url = image.data("src"),
             $loading = $('<div class="iconLoad"><i class="s-spinner"></i></div>'),
             $width = image.attr("width"),
