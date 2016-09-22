@@ -110,9 +110,8 @@
             $wMed = url.replace(regex,"/w320/")+" 320w",
             $wLarge = url.replace(regex,"/w400/")+" 400w",
             $wHuge = url.replace(regex,"/w640/")+" 640w";
-        image.parent().append($loading);
         if("undefined" !== typeof image.attr("data-src")) {
-          $("<img/>").attr("src",url.replace(regex,"/w"+$width+"/")).load(function(){
+          image.parent().append($loading); $("<img/>").attr("src",url.replace(regex,"/w"+$width+"/")).load(function(){
             $(this).remove(); $loading.remove(); image.attr("src",url.replace(regex,"/w"+$width+"/"));image.removeAttr("data-src")
           });
         }
