@@ -102,13 +102,14 @@
       };
       var showImage = function(image){
         var regex = /\/s[0-9]+(\/)?/;
-        var url = image.data("src");
-        var $width = image.attr("width");
-        var $wMax = url.replace(regex,"/w"+$width+"/")+" "+$width+"w";
-        var $wSmall = url.replace(regex,"/w200/")+" 200w";
-        var $wMed = url.replace(regex,"/w320/")+" 320w";
-        var $wLarge = url.replace(regex,"/w400/")+" 400w";
-        var $wHuge = url.replace(regex,"/w640/")+" 640w";
+            url = image.data("src"),
+            $loading = $('<div class="iconLoad"><i class="s-spinner"></i></div>'),
+            $width = image.attr("width"),
+            $wMax = url.replace(regex,"/w"+$width+"/")+" "+$width+"w",
+            $wSmall = url.replace(regex,"/w200/")+" 200w",
+            $wMed = url.replace(regex,"/w320/")+" 320w",
+            $wLarge = url.replace(regex,"/w400/")+" 400w",
+            $wHuge = url.replace(regex,"/w640/")+" 640w";
         image.parent().append($loading);
         if("undefined" !== typeof image.attr("data-src")) {
           $("<img/>").attr("src",url.replace(regex,"/w"+$width+"/")).load(function(){
