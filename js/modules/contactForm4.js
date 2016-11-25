@@ -1,4 +1,4 @@
-function($,sfr){
+(function($,sfr){
   var attach = function(submit){
     var $form = $(this),
         $button = $form.find("button");
@@ -51,4 +51,4 @@ function($,sfr){
     }
   }
 
-}($, SFR); $(SFR.modules.contactForm.init)
+}($, SFR)); $(SFR.modules.contactForm.init)
