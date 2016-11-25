@@ -18,7 +18,7 @@ function($,sfr){
       },
       error: function(data){
         var $message = $form.attr("data-snd-fail");
-        sending && "function" == typeof sending[$message] && sending[$message]($form, $button, $.responseJSON)
+        "function" == typeof sending[$message] && sending[$message]($form, $button, $.responseJSON)
       }
     });
     submit.preventDefault()
