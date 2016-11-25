@@ -14,11 +14,11 @@ function($,sfr){
       },
       success: function(data){
         var $message = $form.attr("data-snd-success");
-        "function" == typeof sending[$message] && sending[$message]($form, $button, $)
+        sending && "function" == typeof sending[$message] && sending[$message]($form, $button, $)
       },
       error: function(data){
         var $message = $form.attr("data-snd-fail");
-        "function" == typeof sending[$message] && sending[$message]($form, $button, $.responseJSON)
+        sending && "function" == typeof sending[$message] && sending[$message]($form, $button, $.responseJSON)
       }
     });
     submit.preventDefault()
