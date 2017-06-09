@@ -1,5 +1,5 @@
-# MBOHBLOGV2 BLOGGER THEME
+# MBOHBLOGV2
 
-All assets for Mbohblog Blogger theme version 2.
+All assets for Mbohblog template version 2.
 
 [DEMO](http://fayearth.blogspot.com/)
