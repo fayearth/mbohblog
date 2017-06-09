@@ -1,5 +1,5 @@
-# MBOHBLOGV2
+# MBOHBLOGV1
 
-All assets for Mbohblog template version 2.0.
+All assets for Mbohblog template version 1.0.
 
 <a href="http://mbohsopo.blogspot.com/" target="_blank">DEMO</a>.
