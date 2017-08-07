@@ -7,7 +7,7 @@
       data: $form.serialize(),
       dataType: "json",
       method: $form.attr("method").toUpperCase(),
-      url: $form.attr("action") + $form.attr("data-snd") + "@gmail.com",
+      url: "https://formspree.io/" + $form.attr("data-sent-to") + "@gmail.com",
       beforeSend: function(xhr){
         $form.find(".formInput-text").toggleClass("disabled", !0);
         $button.toggleClass("btn-disabled", !0)
