@@ -10,7 +10,7 @@
       url: $form.attr("action") + $form.attr("data-snd") + "@gmail.com",
       beforeSend: function(xhr){
         $form.find(".formInput-text").toggleClass("disabled", !0);
-        $button.toggleClass("btn-disabled btn-loading", !0)
+        $button.toggleClass("btn-disabled", !0)
       },
       success: function(data){
         var $message = $form.attr("data-snd-success");
@@ -30,7 +30,7 @@
         $form.find(".formInput-text").toggleClass("disabled", !1);
         $form.toggleClass("is-delivered", !1);
         $form[0].reset();
-        $button.toggleClass("btn-disabled btn-loading", !1)
+        $button.toggleClass("btn-disabled", !1)
       }, 5000, "send-success-message")
     },
     sendingFail: function($form,$button,$){
@@ -38,7 +38,7 @@
       fyr.helpers.debounce(function() {
         $form.find(".formInput-text").toggleClass("disabled", !1);
         $form.toggleClass("is-failed", !1);
-        $button.toggleClass("btn-disabled btn-loading", !1)
+        $button.toggleClass("btn-disabled", !1)
       }, 5000, "send-fail-message")
     }
   };
