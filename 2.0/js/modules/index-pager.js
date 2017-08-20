@@ -23,7 +23,7 @@
       strLabel = baseUrl.indexOf("/search/label/") + 14;
       strLabelReg = baseUrl.indexOf("?");
       nameLabel = (strLabelReg == -1) ? baseUrl.substring(strLabel) : baseUrl.substring(strLabel, strLabelReg);
-      return encodeURIComponent(nameLabel)
+      return encodeURI(nameLabel)
   };
   var maxPosts = function(){
       var regEx = /\max-results=/,
