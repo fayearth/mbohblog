@@ -23,7 +23,7 @@
       strLabel = baseUrl.indexOf("/search/label/") + 14;
       strLabelReg = baseUrl.indexOf("?");
       nameLabel = (strLabelReg == -1) ? baseUrl.substring(strLabel) : baseUrl.substring(strLabel, strLabelReg);
-      return encodeURI(nameLabel)
+      return nameLabel
   };
   var maxPosts = function(){
       var regEx = /\max-results=/,
@@ -41,7 +41,7 @@
         success: dfr.resolve,
         error: dfr.reject
       });
-      dfr.promise().done(function(response) {console.log(response);
+      dfr.promise().done(function(response) {console.log(fyr.env.data.homepageUrl + getFeeds());
         var getUrl = baseUrl,
             strUrl = getUrl.indexOf("/search/label/") != -1,
             substrUrl = strUrl ? getUrl.substr(getUrl.indexOf("/search/label/") + 14, getUrl.length) : "";
