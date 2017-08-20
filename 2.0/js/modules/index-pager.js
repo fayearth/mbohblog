@@ -46,12 +46,12 @@
             strUrl = getUrl.indexOf("/search/label/") != -1,
             substrUrl = strUrl ? getUrl.substr(getUrl.indexOf("/search/label/") + 14, getUrl.length) : "";
         substrUrl = substrUrl.indexOf("?") != -1 ? substrUrl.substr(0, substrUrl.indexOf("?")) : substrUrl;
-        var pathUrl = strUrl ? "search/label/" + encodeURIComponent(substrUrl) + "?updated-max=" : "search?updated-max=",
+        var pathUrl = strUrl ? "search/label/" + substrUrl + "?updated-max=" : "search?updated-max=",
             feedEntry = response.feed.entry.length,
             entryLength = Math.ceil(feedEntry / maxPosts()-1);
         if (entryLength == 0) { return }
         var selector,pathPack = [""];
-        strUrl ? pathPack.push("search/label/" + encodeURIComponent(substrUrl)) : pathPack.push("?max-results=" + maxPosts());
+        strUrl ? pathPack.push("search/label/" + substrUrl) : pathPack.push("?max-results=" + maxPosts());
         selector = 1;
         for (var count = 2; count <= entryLength; count++) {
           var chosenFeed = (count - 1) * maxPosts() - 1,
