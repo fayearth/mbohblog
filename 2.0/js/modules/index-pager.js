@@ -41,7 +41,7 @@
         success: dfr.resolve,
         error: dfr.reject
       });
-      dfr.promise().done(function(response) {console.log(fyr.env.data.homepageUrl + getFeeds());
+      dfr.promise().done(function(response) {
         var getUrl = baseUrl,
             strUrl = getUrl.indexOf("/search/label/") != -1,
             substrUrl = strUrl ? getUrl.substr(getUrl.indexOf("/search/label/") + 14, getUrl.length) : "";
@@ -60,7 +60,7 @@
           dateUrl = dateUrl.replace(/\+/,"%2B");
           if (getUrl.indexOf(dateUrl) == -1) { selector = count }
           pathPack.push(pathUrl + dateUrl);
-        };
+        };console.log(pathPack);
         if(!(btnPrev.parent().hasClass("shown"))){ btnPrev.parent().addClass("shown") };
         btnPrev.attr("href","/"+pathPack[selector])
       })
