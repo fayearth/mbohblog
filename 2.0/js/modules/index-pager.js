@@ -41,7 +41,7 @@
         success: dfr.resolve,
         error: dfr.reject
       });
-      dfr.promise().done(function(response) {
+      dfr.promise().done(function(response) {console.log(response);
         var getUrl = baseUrl,
             strUrl = getUrl.indexOf("/search/label/") != -1,
             substrUrl = strUrl ? getUrl.substr(getUrl.indexOf("/search/label/") + 14, getUrl.length) : "";
