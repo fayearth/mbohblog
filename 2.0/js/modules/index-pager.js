@@ -5,7 +5,7 @@
       btnNext = ".pager-next",
       btnPrev = ".pager-prev",
       beaconSelector = ".page-beacon",
-      maxPost = 19;
+      maxPost = 20;
   var getFeeds = function(){
       var strSection, substrSection, nameSection;
       if (baseUrl.indexOf("?q=") != -1 || baseUrl.indexOf(".html") != -1) { return };
@@ -42,7 +42,7 @@
         error: dfr.reject
       });
       dfr.promise().done(function(response) {
-        var getUrl = baseUrl,
+        var getUrl = location.href,
             strUrl = getUrl.indexOf("/search/label/") != -1,
             substrUrl = strUrl ? getUrl.substr(getUrl.indexOf("/search/label/") + 14, getUrl.length) : "";
         substrUrl = substrUrl.indexOf("?") != -1 ? substrUrl.substr(0, substrUrl.indexOf("?")) : substrUrl;
