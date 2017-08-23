@@ -5,7 +5,7 @@
       btnNext = ".pager-next",
       btnPrev = ".pager-prev",
       beaconSelector = ".page-beacon",
-      maxPost = 20;
+      maxPost = 19;
   var getFeeds = function(){
       var strSection, substrSection, nameSection;
       if (baseUrl.indexOf("?q=") != -1 || baseUrl.indexOf(".html") != -1) { return };
@@ -49,7 +49,7 @@
         var pathUrl = strUrl ? "search/label/" + substrUrl + "?updated-max=" : "search?updated-max=",
             feedEntry = response.feed.entry.length,
             entryLength = Math.ceil(feedEntry / maxPosts()-1);
-        /*if (entryLength == 0) { return }*/
+        if (entryLength == 0) { return }
         var selector,pathPack = [""];
         strUrl ? pathPack.push("search/label/" + substrUrl) : pathPack.push("?max-results=" + maxPosts());
         selector = 1;
