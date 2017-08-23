@@ -60,7 +60,7 @@
           dateUrl = dateUrl.replace(/\+/,"%2B");
           if (getUrl.indexOf(dateUrl) == -1) { selector = count }
           pathPack.push(pathUrl + dateUrl);
-        }; console.log(pathPack)
+        };
         if(!(btnPrev.parent().hasClass("shown"))){ btnPrev.parent().addClass("shown") };
         btnPrev.attr("href","/"+pathPack[selector])
       })
