@@ -49,11 +49,11 @@
         var pathUrl = strUrl ? "search/label/" + substrUrl + "?updated-max=" : "search?updated-max=",
             feedEntry = response.feed.entry.length,
             entryLength = Math.ceil(feedEntry / maxPosts()-1);
-        if (entryLength == 0) { return }
+        /*if (entryLength == 0) { return }*/
         var selector,pathPack = [""];
         strUrl ? pathPack.push("search/label/" + substrUrl) : pathPack.push("?max-results=" + maxPosts());
         selector = 1;
-        for (var count = 2; count < entryLength; count++) {
+        for (var count = 2; count <= entryLength; count++) {
           var chosenFeed = (count - 1) * maxPosts() - 1,
               datePublish = response.feed.entry[chosenFeed].published.$t,
               dateUrl = datePublish.substring(0, 19) + datePublish.substring(23, 29);
