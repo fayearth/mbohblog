@@ -12,9 +12,9 @@
       strSection = baseUrl.indexOf("/search/label/") + 14;
       if (strSection != 13) {
         substrSection = getLabel();
-        nameSection = "feeds/posts/summary/-/" + substrSection + "?alt=json-in-script&max-results=99999";
+        nameSection = "feeds/posts/default/-/" + substrSection + "?alt=json-in-script&max-results=99999";
       } else {
-        nameSection = "feeds/posts/summary?alt=json-in-script&max-results=99999";
+        nameSection = "feeds/posts/default?alt=json-in-script&max-results=99999";
       };
       return nameSection
   };
