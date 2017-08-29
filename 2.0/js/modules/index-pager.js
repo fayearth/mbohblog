@@ -62,7 +62,7 @@
           pathPack.push(pathUrl + dateUrl);
         }; console.log(pathPack);
         if(!(btnPrev.parent().hasClass("shown"))){ btnPrev.parent().addClass("shown") };
-        btnPrev.attr("href",fyr.env.data.homepageUrl+"/"+pathPack[selector])
+        btnPrev.attr("href",fyr.env.data.homepageUrl+pathPack[selector])
       })
    };
   var btnNextShow = function(beacon){
